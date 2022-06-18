@@ -1,0 +1,359 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0b223a;
+  font-family: "Roboto", sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+nav {
+  position: relative;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  background-color: #051220;
+}
+
+.nav-mobile {
+  display: none;
+}
+
+nav .logo img {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+nav ul {
+  justify-self: flex-end;
+  display: flex;
+  column-gap: 25px;
+  list-style: none;
+  align-items: center;
+  padding-right: 4%;
+}
+
+nav ul li a {
+  justify-self: flex-end;
+  display: flex;
+  column-gap: 25px;
+  list-style: none;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+nav ul li a:hover {
+  color: gray;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  place-items: start;
+  margin: 50px 5px 0;
+}
+
+section.kitties-section {
+  margin-top: 0;
+}
+
+section .image-container {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+section .image-container .main-image {
+  width: 100%;
+  height: 100%;
+  max-width: 450px;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.952);
+  place-self: center;
+}
+
+section .image-container .save {
+  max-width: 30px;
+  max-height: 30px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+section .kitty-content {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: right;
+}
+
+section .kitty-content h1,
+section.kitties-section h2 {
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  background-color: #145da0;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+section .kitty-content h1 {
+  width: 75%;
+}
+
+.buttons-container {
+  position: absolute;
+  right: 10%;
+  top: 190%;
+}
+
+.buttons-container img {
+  max-width: 30px;
+  max-height: 30px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+section .kitty-content div {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  color: #f5f5f5;
+  text-align: left;
+}
+
+section .kitty-content button {
+  height: 45px;
+  width: 100%;
+  max-width: 180px;
+  margin-top: 40px;
+  background-color: #145da0;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+section .kitty-content button:hover {
+  background-color: #21466e;
+}
+
+section.kitties-section .kitties-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+section.kitties-section .kitties-container .kitty-image-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+section.kitties-section .kitties-container .kitty-image-container .kitty-image {
+  position: relative;
+}
+
+section.kitties-section
+  .kitties-container
+  .kitty-image-container
+  .kitty-delete {
+  position: absolute;
+  right: 0.5vw;
+  top: -2%;
+}
+
+section.kitties-section
+  .kitties-container
+  .kitty-image-container
+  .kitty-delete
+  i {
+  color: white;
+  border: 1px solid white;
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+section.kitties-section
+  .kitties-container
+  .kitty-image-container
+  .kitty-delete
+  i:hover {
+  background-color: #a01414;
+}
+
+section.kitties-section .kitties-container img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.952);
+  transition: 0.3s;
+}
+
+section.kitties-section .kitties-container .kitty {
+  height: 100%;
+  width: 100%;
+  transition: 0.3s;
+}
+
+section.kitties-section .kitties-container h3 {
+  font-size: 20px;
+  color: #f5f5f5;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.kitty-selection .image-container .save {
+  display: none;
+}
+
+@keyframes goRight {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes goLeft {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+@media only screen and (min-width: 100px) and (max-width: 830px) {
+  nav {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+  }
+
+  .nav-mobile .burger-container img {
+    width: 30px;
+    height: 30px;
+    transition: 0.3s;
+  }
+
+  .nav-mobile .burger-container img.active {
+    transform: rotate(90deg);
+  }
+
+  .nav-mobile .buttons-container {
+    top: unset;
+    position: unset;
+  }
+
+  .popup-menu {
+    position: fixed;
+    top: 0%;
+    left: -200%;
+    width: 30%;
+    background: white;
+    height: auto;
+    padding: 0;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 5vw;
+    z-index: 3;
+    animation-duration: 0.5s;
+  }
+
+  .popup-menu.active {
+    left: 0%;
+    display: flex;
+  }
+
+  .popup-menu .popup-close {
+    align-self: self-end;
+    padding-right: 4vw;
+    margin-bottom: 8vw;
+  }
+
+  .popup-menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+  }
+
+  .popup-menu li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+
+  .kitty-selection {
+    grid-template-columns: 1fr;
+    width: 95%;
+    margin: 50px auto;
+  }
+
+  .kitty-selection .kitty-content {
+    text-align: center;
+    z-index: 2;
+  }
+
+  .kitty-selection .kitty-content h1 {
+    margin: -22px auto 40px;
+  }
+
+  section.kitties-section .kitties-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+  }
+
+  section.kitties-section .kitties-container img {
+    width: 190px;
+    height: 190px;
+  }
+
+  .kitty-selection .image-container .save {
+    display: block;
+    position: absolute;
+    top: -4%;
+    left: 4%;
+    filter: invert(1) drop-shadow(2px 2px 5px #222);
+    z-index: 9;
+  }
+}

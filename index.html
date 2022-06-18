@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Get your kitty</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="./images/logo.png" alt="logo" />
+      </div>
+      <ul>
+        <li><a class="kitties-home">Home</a></li>
+        <li><a class="kitties-btn">My kitties</a></li>
+        <li>
+          <a href="https://maizo21.github.io/profileCard/" target="_blank"
+            >Contact</a
+          >
+        </li>
+      </ul>
+      <div class="buttons-container">
+        <img src="./images/heart2.png" alt="heart" class="save" />
+      </div>
+    </nav>
+
+    <nav class="nav-mobile">
+      <div class="burger-container">
+        <img src="./images/menu.png" alt="menu" class="burger" />
+      </div>
+
+      <div class="logo">
+        <img src="./images/logo.png" alt="logo" class="logo-mobile" />
+      </div>
+
+      <div class="buttons-container">
+        <img src="./images/bookmark.png" alt="heart" class="saved" />
+      </div>
+    </nav>
+
+    <main>
+      <section class="kitty-selection">
+        <div class="image-container">
+          <img src="./images/heart2.png" alt="heart" class="save" />
+          <img src="" alt="kitty" class="main-image" />
+        </div>
+
+        <div class="kitty-content">
+          <h1>kitty</h1>
+          <div>description</div>
+          <button>pss!</button>
+        </div>
+      </section>
+
+      <section class="kitties-section hidden">
+        <h2>My Kitties</h2>
+        <div class="kitties-container"></div>
+      </section>
+    </main>
+
+    <div class="popup-menu hidden">
+      <div class="popup-close">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <ul>
+        <li>
+          <a href="https://maizo21.github.io/profileCard/" target="_blank"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
