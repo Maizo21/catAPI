@@ -356,4 +356,9 @@ section.kitties-section .kitties-container h3 {
     filter: invert(1) drop-shadow(2px 2px 5px #222);
     z-index: 9;
   }
+
+  .buttons-container img,
+  .nav-mobile .burger-container img {
+    filter: invert(1);
+  }
 }
