@@ -15,7 +15,7 @@ const logo = document.querySelector(".logo-mobile");
 const popupMenu = document.querySelector(".popup-menu");
 const popupMenuBtn = document.querySelector(".burger");
 const popupMenuClose = document.querySelector(".popup-menu .popup-close");
-const key = "599479b9-bb37-40a8-b0d8-f75c30a76ffa";
+const key = "live_UQFaferEMSonsGiiekcnt3Slcrhst9IullMu4bUOjhgRn78uTu2EJDWiDN1REhAN";
 const url = `https://api.thecatapi.com/v1/breeds`;
 
 /* Fetch */
@@ -32,7 +32,8 @@ btn.addEventListener("click", function () {
   })
     .then((response) => response.json())
     .then((data) => {
-      image.src = data[randomNumber].image.url;
+      console.log(data[randomNumber]);
+      image.src = `https://cdn2.thecatapi.com/images/${data[randomNumber].reference_image_id}.jpg`;
       image.onload = function () {
         title.innerHTML = data[randomNumber].name;
         description.innerHTML = data[randomNumber].description;
